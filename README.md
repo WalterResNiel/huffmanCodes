@@ -5,6 +5,7 @@ huffman codes, with heavy usage of Data.Map, which is steadily becoming my
 favorite library ever.
 
 stack init
+
 stack build
 
 usage: stack run encrypt source destination
@@ -22,15 +23,20 @@ the same after decryption
 
 (I originally made everything in 1 file, proHoffEncode.hs. I left that file
   here too, in case its easier to follow):
+
 stack exec -- ghc -O2 proHoffEncode.hs
+
 ./proHoffEncode encrypt .... ....
+
 (which somehow also runs a lot faster)
 
 -----
 
 
 stack run encrypt testFile.txt output.txt
+
 stack run decrypt output.txt comparable.txt
+
 
 diff testFile.txt comparable.txt
 
